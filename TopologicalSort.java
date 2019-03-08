@@ -14,8 +14,6 @@ public class TopologicalSort {
 
     }
 
-
-
     private void dfs(DiGraph graph, int vertex) {
         this.marked[vertex] = true;
         for (int w : graph.adj(vertex)) {
@@ -41,6 +39,7 @@ public class TopologicalSort {
             this.reversePostOrder.push(vertex);
         }
     }
+    
     public Iterable<Integer> reversePost() {
         return this.reversePostOrder;
     }
